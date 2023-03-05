@@ -8,9 +8,13 @@ import Footer from "../HomePage/Footer"
 const ProductDetails = () => {
 
   const location = useLocation()
+  console.log(location);
   const {state} = location
+  // console.log(state);
   
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  //This will handle the decrement of the no of product
   const handleDecrement = ()=>{
     setCount(preValue =>{
       if (preValue < 1) {
@@ -20,13 +24,14 @@ const ProductDetails = () => {
     })
     
   }
+  //This will handle the increment of the no of product
 
   const handleIncrement = ()=>{
     setCount(preValue => {
       return preValue = preValue+1;
     })
   }
-
+  // Putting the commas in Rs
   const toIndian = (number)=>{
     let x=number.toString();
     let lastThree = x.substring(x.length-3);
@@ -37,9 +42,10 @@ const ProductDetails = () => {
     return res;
   }
 
-  const handleCartClick = ()=>{
-    
-  }
+  // handleCartClick(state);
+
+  
+
 
   return (
     <div className='product-details'>
@@ -47,20 +53,20 @@ const ProductDetails = () => {
       <div className="container">
         <div className="product-detail">
           <div className="product-image">
-            <img src={state.image} alt="" />
+            <img src={state.item.image} alt="" />
           </div>
           <div className="product-info">
             <div className="product-title">
-              <h3> {state.title} </h3>
+              <h3> {state.item.title} </h3>
             </div>
             <div className="desciption">
-                {state.description}
+                {state.item.description}
             </div>
             <div className="rating">
-              {state.rating.rate}
+              {state.item.rating.rate}
             </div>
             <div className="product-price">
-              <h3>Rs. {toIndian(state.price*80)} </h3>
+              <h3>Rs. {toIndian(state.item.price*80)} </h3>
             </div>
             <div className="counter">
               <span>
@@ -78,7 +84,7 @@ const ProductDetails = () => {
                   <button type="button" className="btn btn-primary btn-lg">Buy Now</button>
                 </div>
                 <div className="addtocart">
-                  <button type="button" className="btn btn-primary btn-lg" onClick={handleCartClick}>Add to Cart</button>
+                  <button type="button" className="btn btn-primary btn-lg">Add to Cart</button>
                 </div>
               </div>
             </div>

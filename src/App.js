@@ -4,10 +4,13 @@ import HomePage from './Components/HomePage/HomePage';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
 import ScrollToTop from './Components/ScrollTop';
 import Cart from './Components/Cart/Cart';
+import { useState } from 'react';
 
 
 function App() {
 
+
+  
 
   return (
     <ScrollToTop>

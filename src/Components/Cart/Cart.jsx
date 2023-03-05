@@ -7,7 +7,6 @@ const Cart = () => {
   const location = useLocation()
   const {state} = location
 
-
   return (
     <div className='cart'>
         {state.title}

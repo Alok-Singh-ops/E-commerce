@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "../HomePage/TopPicks.css";
 
 
-const TopCards = ({item,id}) => {
+const TopCards = ({item,id,handleCartClick}) => {
   const {title,image,price,desc,rating} = item
 
   const toIndian = (number)=>{
@@ -16,10 +16,15 @@ const TopCards = ({item,id}) => {
 
     return res;
   }
+
+  const myData = {
+    item: item,
+    handleCartClick: handleCartClick,
+  };
   return (
     
     <div className="col-sm-3 mb-3 mb-sm-0 topPicks_cards ">
-      <Link to= 'product-details' state={item}>
+      <Link to= {'/product-details'} state={{data: myData}}>
       <div className="card topPicks_card" style={{width: "286px"}}>
       <img src= {image} className="card-img-top" alt="..." />
       <div className="card-body">
