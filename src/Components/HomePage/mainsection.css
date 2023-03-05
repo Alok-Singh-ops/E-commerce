@@ -1,0 +1,32 @@
+.main_Section{
+  width: 100%;
+  height: 500px;
+  /* background-color: black; */
+  background-image: url(../../assests//7351283.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.main_section_heading{
+  width: 74rem;
+}
+
+.main_section_heading h1{
+  margin-left:55rem;
+  padding-top: 10rem;
+  color: rgb(2, 78, 2);
+}
+
+.main_section_heading p{
+  margin-left: 55rem;
+}
+.main_section_heading button{
+  margin-left: 55rem;
+  border: none;
+  height: 35px;
+  width: 100px;
+  color: white;
+  background-color: rgb(2, 78, 2);
+  border-radius: 10px;
+}

@@ -1,0 +1,12 @@
+*{
+  font-family: 'Tilt Neon', cursive;
+}
+
+.navbar{
+  background-color: rgb(255, 255, 255) !important;
+}
+
+input[type=search]{
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}

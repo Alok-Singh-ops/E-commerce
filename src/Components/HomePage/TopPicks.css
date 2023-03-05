@@ -1,0 +1,40 @@
+
+
+.topPicks_card{
+  -webkit-transition: box-shadow  0.2s ease-in-out;
+    -moz-transition: box-shadow  0.2s ease-in-out;
+    -ms-transition: box-shadow  0.2s ease-in-out;
+    -o-transition: box-shadow  0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.topPicks_card:hover{
+  cursor: pointer;
+  -moz-box-shadow: 0 0 5px #999;
+  -webkit-box-shadow: 0 0 5px #999;
+  box-shadow: 0 0 5px #999;
+  
+}
+
+.topPicks_card{
+  border: none;
+  margin-top: 40px;
+  height: 25em;
+}
+
+.topPicks .card-img, .card-img-bottom, .card-img-top{
+  display: block;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 12rem; 
+}
+
+.rating{
+  color: white;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  background-color: green;
+}
