@@ -17,14 +17,16 @@ const TopCards = ({item,id,handleCartClick}) => {
     return res;
   }
 
-  const myData = {
-    item: item,
-    handleCartClick: handleCartClick,
-  };
+  
+
+  // const myData = {
+  //   item: item,
+  //   handleCartClick: handleCartClick,
+  // };
   return (
     
     <div className="col-sm-3 mb-3 mb-sm-0 topPicks_cards ">
-      <Link to= {'/product-details'} state={{data: myData}}>
+      <Link to= {'/product-details'} state={item}>
       <div className="card topPicks_card" style={{width: "286px"}}>
       <img src= {image} className="card-img-top" alt="..." />
       <div className="card-body">

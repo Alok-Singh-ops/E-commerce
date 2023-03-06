@@ -10,3 +10,7 @@ input[type=search]{
   border-radius: 10px;
   background-color: #f9f9f9;
 }
+
+.navbar .cart{
+  margin-right: 10px;
+}
