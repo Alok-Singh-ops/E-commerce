@@ -9,6 +9,7 @@ import RegistrationForm from './Components/Registration/Registration.jsx';
 import Login from './Components/Login/Login';
 import { useEffect, useState } from 'react';
 import ProtectedRoutes from './Routes/ProtectedRoutes';
+import { getAuth,signOut } from 'firebase/auth';
 
 
 

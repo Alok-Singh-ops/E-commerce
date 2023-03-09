@@ -61,28 +61,28 @@ const Navbar = () => {
             <li className="nav-item"><a className="nav-link" href="#">What's New</a></li>
             <li className="nav-item"><a className="nav-link" href="#">Delivery</a></li>
           </ul>
-            <ul className='navbar-nav'>
-              <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Account
-              </a>
-              <ul className="dropdown-menu">
-                {
-                  currentUser 
-                  ? 
-                    <li><a className="dropdown-item" href="#" onClick={handleSignOut}>Sign Out</a></li>
-                  :
-                    <li><Link to = {"/login"}className="dropdown-item" href="#">Sign In</Link></li>
-                }
-              </ul>
-            </li>
-              <Link to = "/cart" className="nav-link" href="#">
-                <li className="nav-item cart" >
-                  <span>Cart</span>
-                  <span>({state.length})</span>
-                </li>
-              </Link>
+          <ul className='navbar-nav'>
+            <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+            </a>
+            <ul className="dropdown-menu">
+              {
+                currentUser 
+                ? 
+                  <li><a className="dropdown-item" href="#" onClick={handleSignOut}>Sign Out</a></li>
+                :
+                  <li><Link to = {"/login"}className="dropdown-item" href="#">Sign In</Link></li>
+              }
             </ul>
+          </li>
+            <Link to = "/cart" className="nav-link" href="#">
+              <li className="nav-item cart" >
+                <span>Cart</span>
+                <span>({state.length})</span>
+              </li>
+            </Link>
+          </ul>
         </div>
       </div>
       <ToastContainer/>

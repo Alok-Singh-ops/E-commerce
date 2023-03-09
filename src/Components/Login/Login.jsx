@@ -15,12 +15,9 @@ import { auth } from '../../Firebase/firebase';
 import authErrors from '../../Firebase/authError';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import { useAuthState } from 'react-firebase-hooks/auth';
+import Navbar from '../HomePage/Navbar';
 
 
-const CurrentUser = ()=>{
-  
-}
 
  
 const Login = () => {
@@ -66,9 +63,8 @@ const Login = () => {
       // console.log(formData);
     }
     return(
-        <MDBContainer fluid className="p-3 my-5">
-      <form onSubmit={handleSubmit}>
-      
+      <>
+      <MDBContainer fluid className="p-3 my-5">
           <MDBRow>
             <MDBCol col='10' md='6'>
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" />
@@ -83,22 +79,15 @@ const Login = () => {
               <MDBBtn className="mb-4 w-100" size="lg">Sign in</MDBBtn>
               <Link to = "/register">
                 <MDBBtn className="mb-4 w-100" size="lg">Sign up</MDBBtn>
+                <Link to = {"/"}>Home</Link>
 
               </Link>
-
-
             </MDBCol>
-
-            
           </MDBRow>
           <ToastContainer autoClose = {5000}/>
-        </form>
-        <Link to = {'/registration'}>
-          <MDBBtn className="mb-4 w-100" size="lg">Sign Up</MDBBtn>
-
-        </Link>
-
         </MDBContainer>
+      </>
+        
     )
 }
 
