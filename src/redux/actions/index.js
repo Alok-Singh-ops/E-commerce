@@ -20,3 +20,10 @@ export const handleIncrement = (product) =>{
     payload: product
   }
 }
+
+// export const formData = (formData)=>{
+//   return {
+//     type: "FORMDATA",
+//     pa
+//   }
+// }
