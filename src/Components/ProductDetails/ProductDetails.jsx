@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Navbar from '../HomePage/Navbar'
 import '../ProductDetails/productDetails.css'
 import Footer from "../HomePage/Footer"
-import { useSelector,useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addCart } from '../../redux/actions'
 
 

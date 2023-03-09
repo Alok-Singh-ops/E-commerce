@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import "../HomePage/TopPicks.css";
 
 
-const TopCards = ({item,id,handleCartClick}) => {
-  const {title,image,price,desc,rating} = item
+const TopCards = ({item}) => {
+  const {title,image,price,rating} = item
 
   const toIndian = (number)=>{
     let x=number.toString();
     let lastThree = x.substring(x.length-3);
     let otherNumbers = x.substring(0,x.length-3);
-    if(otherNumbers != '')
+    if(otherNumbers !== '')
         lastThree = ',' + lastThree;
     let res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
 

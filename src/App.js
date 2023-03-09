@@ -1,24 +1,19 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import HomePage from './Components/HomePage/HomePage';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
 import ScrollToTop from './Components/ScrollTop';
 import Cart from './Components/Cart/Cart';
 import RegistrationForm from './Components/Registration/Registration.jsx';
 import Login from './Components/Login/Login';
-import { useEffect, useState } from 'react';
 import ProtectedRoutes from './Routes/ProtectedRoutes';
-import { getAuth,signOut } from 'firebase/auth';
+
 
 
 
 
 function App() {
-  const navigate = useNavigate();  
   
-  
-  // console.log(showLogin);
   return (
     <ScrollToTop>
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import handleCart from "../../redux/reducers/handleCart";
 import "./cart.css"
 import { Link } from "react-router-dom";
 
@@ -188,7 +187,7 @@ function Cart() {
 
   const onRemoveProduct = (i) => {
     const filteredProduct = products.filter((product, index) => {
-      return index != i;
+      return index !== i;
     });
 
     setProducts(filteredProduct);

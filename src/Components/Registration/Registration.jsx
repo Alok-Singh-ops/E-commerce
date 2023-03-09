@@ -16,7 +16,6 @@ import {
         MDBCardImage,
         MDBInput,
         MDBIcon,
-        MDBCheckbox
     }
     from 'mdb-react-ui-kit';
 
@@ -37,7 +36,7 @@ function Registration() {
 
 
     const handleChange = (event)=>{
-        const {name,value,type} = event.target;
+        const {name,value} = event.target;
         setFormData(prevFormData=>{
             return ({
                 ...prevFormData,
@@ -47,10 +46,6 @@ function Registration() {
     }
 
     //Function to match the error code and return the error message from ../../Firebase/authError
-
-   
-
-
     const handleSubmit = async (e)=>{
         e.preventDefault();
         

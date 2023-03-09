@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import {  signInWithEmailAndPassword   } from 'firebase/auth';
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import {
   MDBContainer,
   MDBCol,
   MDBRow,
   MDBBtn,
-  MDBIcon,
   MDBInput,
   MDBCheckbox
 }
@@ -15,7 +14,6 @@ import { auth } from '../../Firebase/firebase';
 import authErrors from '../../Firebase/authError';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-import Navbar from '../HomePage/Navbar';
 
 
 
@@ -64,6 +62,7 @@ const Login = () => {
     }
     return(
       <>
+      <form action="" onSubmit={handleSubmit}>
       <MDBContainer fluid className="p-3 my-5">
           <MDBRow>
             <MDBCol col='10' md='6'>
@@ -86,6 +85,9 @@ const Login = () => {
           </MDBRow>
           <ToastContainer autoClose = {5000}/>
         </MDBContainer>
+      </form>
+
+     
       </>
         
     )

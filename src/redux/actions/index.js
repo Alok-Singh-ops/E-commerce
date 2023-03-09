@@ -1,4 +1,4 @@
-import {actionTypes} from '../types'
+
 
 export const addCart = (product)=>{
   return {

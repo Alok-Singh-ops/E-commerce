@@ -22,7 +22,6 @@ const handleCart = (state = cart,action)=>{
           }
         ]
       }
-    break;
     
 
     case "DELITEM":
@@ -35,12 +34,10 @@ const handleCart = (state = cart,action)=>{
           return x.id ===product.id ? {...x,quantity: x.quantity-1}: x;
         })
       }
-    break;
 
 
       default:
         return state;
-        break
   }
 }
 
